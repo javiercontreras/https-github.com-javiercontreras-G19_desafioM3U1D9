@@ -17,11 +17,7 @@ ventas = {
 "Noviembre": 91000,
 "Diciembre": 21000,
 }
-global filter_dict
-filter_dict = {}
-for key,values in ventas.items():
-    if values >= filter_value:
-        filter_dict[key] = values
 
+filter_dict = {key:ventas[key] for key in ventas if ventas[key] >= filter_value}
 print(filter_dict)
 
